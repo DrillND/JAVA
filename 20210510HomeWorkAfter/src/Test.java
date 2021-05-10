@@ -10,11 +10,27 @@ public class Test {
 		Random r = new Random();
 		
 		int arr[] = new int[6];
-		for (int i = 0; i<6; i++)
+		
+		for (int i = 0; i<arr.length; i++)
 		{
 			int num = r.nextInt(46);
 			
 			arr[i]=num;
+			System.out.print(arr[i]+" ");
+		}
+		
+		System.out.println();
+		
+		for (int i = 0; i<arr.length; i++)
+		{
+			for (int j = 0; j<i; j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					i--;
+				}
+				
+			}
 			System.out.print(arr[i]+" ");
 		}
 	}
