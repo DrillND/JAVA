@@ -16,7 +16,7 @@ public class Test {
 			int num = r.nextInt(46);
 			
 			arr[i]=num;
-			System.out.print(arr[i]+" ");
+			//System.out.print(arr[i]+" ");
 		}
 		
 		System.out.println();
@@ -28,6 +28,7 @@ public class Test {
 				if(arr[i]==arr[j])
 				{
 					i--;
+					//arr[i]=r.nextInt(46);
 				}
 				
 			}

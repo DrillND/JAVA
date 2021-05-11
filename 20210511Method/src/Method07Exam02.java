@@ -15,6 +15,13 @@ public class Method07Exam02 {
 	public static final int MENU_FILE_READ = 2;
 	public static final int MENU_FILE_EXIT = 3;
 
+	public static void writeFile() {
+		
+	}
+	
+	public static void readFile() {
+		
+	}
 	public static void main(String[] args) {
 		String firstName[] = { "김", "박", "이", "최", "장" };
 		String midName[] = { "바", "사", "아", "자", "차" };
@@ -54,6 +61,7 @@ public class Method07Exam02 {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				writeFile();
 				break;
 
 			case MENU_FILE_READ:
@@ -83,8 +91,9 @@ public class Method07Exam02 {
 
 					e.printStackTrace();
 				}
+				readFile();
 				break;
-
+				
 			case MENU_FILE_EXIT:
 				System.out.println("프로그램 종료");
 				s.close();
