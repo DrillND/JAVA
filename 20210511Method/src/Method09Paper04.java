@@ -18,38 +18,51 @@ public class Method09Paper04 {
 		Scanner s = new Scanner(System.in);
 		System.out.println("국어 영어 수학 점수의 총점과 평균값");
 		System.out.println("----------------------------");
+		int korean = 0;
+		int english = 0;
+		int math = 0;
 		
-		for(;;) {
+		while(true) {
 			System.out.println("1.국어 점수 입력(0~100) : ");
-			int korean = s.nextInt();
-			if(korean<=100 && korean>=0) {
-				
+			korean = s.nextInt();
+			if (korean<=100 && korean>=0) {
+				break;
 			}
+			System.out.println("잘못 입력된 점수 입니다.");
 		}
 		
-		
-		
-		if (korean<0) {
-			
+		while(true) {
+			System.out.println("2.영어 점수 입력(0~100) : ");
+			english = s.nextInt();
+			if(english<=100 && english>=0) {
+				break;
+			}
+			System.out.println("잘못 입력된 점수 입니다.");
 		}
-		System.out.println("2.영어 점수 입력(0~100) : ");
-		int english = s.nextInt();
-		System.out.println("3.수학 점수 입력(0~100) : ");
-		int math = s.nextInt();
+		while(true) {
+			System.out.println("3.수학 점수 입력(0~100) : ");
+			math = s.nextInt();
+			if(math<=100 && math>=0) {
+				break;
+			}
+			System.out.println("잘못 입력된 점수 입니다.");
+		}
+		
+		s.close();
 
 		System.out.print("총점 : ");
-		sum(korean,english,math);
+		sum(korean, english, math);
 		System.out.println();
 		System.out.print("평균값 : ");
-		avg(korean,english,math);
+		avg(korean, english, math);
 
 	}
 
 	public static void sum(int num1, int num2, int num3) {
-		System.out.print(num1+num2+num3);
+		System.out.print(num1 + num2 + num3);
 	}
 
 	public static void avg(int num1, int num2, int num3) {
-		System.out.println((num1+num2+num3)/3);
+		System.out.println((num1 + num2 + num3) / 3);
 	}
 }
