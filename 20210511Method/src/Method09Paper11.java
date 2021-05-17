@@ -26,8 +26,9 @@ public class Method09Paper11 {
 		int arrmain[][] = new int[5][3];
 
 		for (int i = 0; i < arrmain.length; i++) {
-			
-				System.out.println(arrmain[i][st1()]);
+			for(int j=0; j< arrmain[i].length; j++) {
+				arrmain[i]=st1();
+				System.out.println(arrmain[i]);
 			}
 		}
 
