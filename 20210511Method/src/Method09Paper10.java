@@ -20,7 +20,7 @@ public class Method09Paper10 {
 	
 	public static int fact(int n) {
 		if (n <= 1) {
-			return n; //or 1리턴해도 된다.
+			return n; //or 1리턴해도 된다.(마지막에 1 한 번 더 찍힌다.
 		}
 		else {
 			return n * fact(n-1);

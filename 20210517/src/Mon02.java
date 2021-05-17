@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
+//기능을 메쏘드화 시킨다. 그게 방법.
 public class Mon02 {
 
 	public static final int MENU_FILE_WRITE = 1;
@@ -23,77 +24,90 @@ public class Mon02 {
 		// Scanner s = new Scanner(System.in);
 		String fullName[] = new String[50];
 		Scanner s = new Scanner(System.in);
+
 		while (true) {
-			System.out.println("---------------------------");
-			System.out.println("파일 제어 프로그램 v1.5");
-			System.out.println("---------------------------");
-			System.out.println("1. 이름 생성히여 파일에 저장");
-			System.out.println("2. 파일에서 이름 읽어오기");
-			System.out.println("3. 프로그램 종료");
-			System.out.println("---------------------------");
-			System.out.println("메뉴를 선택 : ");
-
-			int menu = s.nextInt();
-
-			switch (menu) {
+			switch (mainMenu(s)) {
 			case MENU_FILE_WRITE:
-				FileOutputStream output = null;
-				try {
-					output = new FileOutputStream("testJava.text");
-					for (int i = 0; i < 50; i++) {
-						// System.out.println("파일 생성 및 쓰기 처리");
-						fullName[i] = firstName[r.nextInt(5)] + midName[r.nextInt(5)] + lastName[r.nextInt(5)];
-						System.out.println("번호: " + (i + 1) + " " + fullName[i]);
-						fullName[i] += "\n";
-
-						output.write(fullName[i].getBytes());
-					}
-					output.close();
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				writeData(r, fullName, firstName, midName, lastName);
 				break;
 
 			case MENU_FILE_READ:
-				System.out.println("파일 읽기 처리");
-				BufferedReader br = null;
-				try {
-					br = new BufferedReader(new FileReader("testJava.text"));
-				} catch (FileNotFoundException e) {
-
-					e.printStackTrace();
-				}
-				while (true) {
-					String line = null;
-					try {
-						line = br.readLine();
-					} catch (IOException e) {
-
-						e.printStackTrace();
-					}
-					if (line == null)
-						break;
-					System.out.println(line);
-				}
-				try {
-					br.close();
-				} catch (IOException e) {
-
-					e.printStackTrace();
-				}
+				readData();
 				break;
 
 			case MENU_FILE_EXIT:
-				System.out.println("프로그램 종료");
-				s.close();
-				System.exit(0);
-
+				exitProgram(s);
 			}
 
 		}
 
 	}
 
+	public static void writeData(Random r, String fullName[], String firstName[], String midName[], String lastName[]) {
+		try {
+			FileOutputStream output = new FileOutputStream("testJava.text");
+			for (int i = 0; i < 50; i++) {
+				// System.out.println("파일 생성 및 쓰기 처리");
+				fullName[i] = firstName[r.nextInt(5)] + midName[r.nextInt(5)] + lastName[r.nextInt(5)];
+				System.out.println("번호: " + (i + 1) + " " + fullName[i]);
+				fullName[i] += "\n";
+
+				output.write(fullName[i].getBytes());
+			}
+			output.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void readData() {
+		System.out.println("파일 읽기 처리");
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader("testJava.text"));
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		while (true) {
+			String line = null;
+			try {
+				line = br.readLine();
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+			if (line == null)
+				break;
+			System.out.println(line);
+		}
+		try {
+			br.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
+	public static void exitProgram(Scanner s) {
+		System.out.println("프로그램 종료");
+		s.close();
+		System.exit(0);
+	}
+
+	public static int mainMenu(Scanner s) {
+		System.out.println("---------------------------");
+		System.out.println("파일 제어 프로그램 v1.5");
+		System.out.println("---------------------------");
+		System.out.println("1. 이름 생성히여 파일에 저장");
+		System.out.println("2. 파일에서 이름 읽어오기");
+		System.out.println("3. 프로그램 종료");
+		System.out.println("---------------------------");
+		System.out.println("메뉴를 선택 : ");
+
+		return s.nextInt();
+
+	}
 }
