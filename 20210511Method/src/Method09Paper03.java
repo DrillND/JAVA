@@ -8,15 +8,15 @@ import java.util.Random;
  */
 public class Method09Paper03 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { //메인이 진입 점 
 		int arr[] = new int[10];
-		Random r = new Random();
+		Random r = new Random(); // new 객체를 생성한다. (객체지향 프로그램에서)
 
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = r.nextInt(10);
+			arr[i] = r.nextInt(100)+1; //0이 들어가는 것을 막기위해서 1을 플러스 (1~100)
 			System.out.println(arr[i]);
 		}
-		HT(arr);
+		HT(arr); //arr의 주소값이 메쏘드로 전달, 배열의 시작 주소 위치 던져 준다. 배열은 어딘가에 잡혀있고 위치 정보를 주고 받으면서 값을 받는다. C에서의 포인트 개념
 	}
 
 	public static void HT(int arr[]) {

@@ -9,15 +9,22 @@ import java.util.Scanner;
 public class Method09Paper10 {
 
 	public static void main(String[] args) {
-		System.out.println("팩도리얼 할 숫자 입력 : ");
+		System.out.print("팩도리얼 할 숫자 입력 : ");
 		Scanner s = new Scanner(System.in);
-		int num = s.nextInt();
+		int n = s.nextInt();
+		
 
-		fac();
+		fact(n); //매개변수 혹은 전역변수 =>프로그램 디버깅 할 시 전역변수는 어렵다. 보편적으로 지역변수를 쓴다.
+		System.out.println(fact(n));
 	}
 	
-	public static void fac() {
-		
+	public static int fact(int n) {
+		if (n <= 1) {
+			return n; //or 1리턴해도 된다.
+		}
+		else {
+			return n * fact(n-1);
+		}
 	}
-
+//1이 리턴되고 다시 2로 넘어가서 1*2가 다시 3으로 리턴되서 마지막으로 3*2*1 이 답으로 리턴된다.
 }
