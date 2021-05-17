@@ -23,14 +23,18 @@ public class Method09Paper11 {
 		// for (int i = 0;i<5;i++) {
 		// int arrmain[]= st1();
 		// }
-		int arrmain[][] = new int[5][3];
+		//int arrmain[][] = new int[5][3];
 
-		for (int i = 0; i < arrmain.length; i++) {
-			for(int j=0; j< arrmain[i].length; j++) {
-				arrmain[i]=st1();
-				System.out.println(arrmain[i]);
-			}
-		}
+		//for (int i = 0; i < arrmain.length; i++) {
+			//for(int j=0; j< arrmain[i].length; j++) {
+				int arrmain[]=st1();
+				
+			//}
+			System.out.println(arrmain[0]);
+			System.out.println(arrmain[1]);
+			System.out.println(arrmain[2]);
+			
+		//}
 
 	}
 
