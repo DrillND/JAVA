@@ -13,10 +13,55 @@ public class StudentScore {
 	private int sum;
 	private int avg;
 	private char hakjum;
-
+	public static final String SCHOOL = "한국중학교"; //클래스 변수
+	//final 키워드, 상수변수 == 변수를 바꿀수 없다. 끝까지 한국중학교. 상수변수는 관례적으로 대문자
+	//공통으로 사용할 수 있는 변수 메소드에 스테틱
+	//스쿨이라는 상수변수가 스테틱은 클래스가 저장되는 공간과 다른 곳에 저장
+	//여러개의 클래스들은 다 따로 만들어진다 지들끼리 상수변수는 하나만 만들어져서 그것만 쓴다.
+	//스테틱은 클래스랑 상관이 없다.(공통으로 쓸때 사용한다.)
+	
 	// 외부에 노출이 되지 않는 캡슐화, 정보은닉 변수 접근 제어를 막는다.
 
 	// 인스턴스 메소드
+	
+	
+	//기본생성자, 만들지 않아도 자동으로 생성해준다.
+	public StudentScore() {
+		//System.out.println("기본생성자 생성!");
+		
+		name = "신사임당";
+		kor = 100;
+		eng = 100;
+		math = 100;
+		makeSum();
+		makeAvg();
+		makeHakjum();
+		
+	}
+	
+	/*
+	public StudentScore(String name,int kor, int math, int eng) {
+		this.name = name;
+		this.kor = kor;
+		
+	}
+	*/
+	//생성자 오버로딩
+	public StudentScore(String name, int kor, int math, int eng) {
+		super();// 상속, 제너레이터로 만든 것
+		this.name = name;
+		this.kor = kor;
+		this.math = math;
+		this.eng = eng;
+		
+		makeSum();
+		makeAvg();
+		makeHakjum();
+		showInfo();
+		
+		
+	}
+
 	public void setName(String name) {
 		// 외부에서 정보를 받기 위해 매개변수 네임
 		// name = name; //둘다 셋네임 안에 네임을 가르키게 된다.
@@ -78,6 +123,7 @@ public class StudentScore {
 	}
 
 	public void showInfo() {
+		//System.out.println("학교 : " + StudentScore.SCHOOL);
 		System.out.println("이름 : " + name);
 		System.out.println("국어 : " + kor);
 		System.out.println("영어 : " + eng);

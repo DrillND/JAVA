@@ -32,6 +32,8 @@ public class Class00 {
 		System.out.println("이름 : " + ss1.getName());
 		System.out.println("국어 : " + ss1.getkor());
 
+		
+		
 		StudentScore ss2 = new StudentScore();
 		ss2.setName("김길동");
 		ss2.setKor(90);
@@ -62,10 +64,13 @@ public class Class00 {
 		// --------------------------------------------------------------
 
 		
-		
-		StudentScore arr[] = new StudentScore[5];
 		// 객체생성 안된다. 객체생성 시 생성자가 무조건 필요
+		StudentScore arr[] = new StudentScore[5];
 		// 앞쪽의 StudentScore는 클래스이자 내가 만든 타입 int와 같은, arr[]배열 변수
+		
+		
+		
+		
 		arr[0] = new StudentScore();
 		arr[1] = new StudentScore();
 
@@ -74,20 +79,35 @@ public class Class00 {
 			int score[] = { 20, 40, 60, 80, 100 };
 			Random r = new Random();
 
+			System.out.println("----------------------------");
+			System.out.println("학교 : " + StudentScore.SCHOOL);//객체생성 없이 클래스 이름.SCHOOL
+			//클래스 변수, 스테틱이 있다. 
+			System.out.println("----------------------------");
+			System.out.println("번호: " + (i+1));
 			// StudnetScore 클래스 객체 생성 무조건 생성자가 있어야 객체 생성
-			arr[i] = new StudentScore();
-			arr[i].setName(name[r.nextInt(5)]);
-			arr[i].setKor(score[r.nextInt(5)]);
-			arr[i].setEng(score[r.nextInt(5)]);
-			arr[i].setMath(score[r.nextInt(5)]);
-			arr[i].makeSum();
-			arr[i].makeAvg();
-			arr[i].makeHakjum();
+			
+			//생성자 있는 객체
+			arr[i] = new StudentScore(name[r.nextInt(5)],score[r.nextInt(5)],score[r.nextInt(5)],score[r.nextInt(5)]); //매개변수 없는 생성자, 기본 생성자
+			//arr[i].setName(name[r.nextInt(5)]);
+			//arr[i].setKor(score[r.nextInt(5)]);
+			//arr[i].setEng(score[r.nextInt(5)]);
+			//arr[i].setMath(score[r.nextInt(5)]);
+			//arr[i].makeSum();
+			//arr[i].makeAvg();
+			//arr[i].makeHakjum();
+			
 			// System.out.println(arr[i].getName());
+			
+			
 			arr[i].showInfo();
 		}
+		StudentScore sc = new StudentScore(); //기본생성자
+		sc.showInfo(); 
 	}
 
 	// 내부 클래스는 퍼블릭 없어야 한다.
 
+	
+	//스테틱의 의미와 생성자를 어떻게 활용 할 것인가?
+	//생성자 
 }
