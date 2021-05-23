@@ -26,7 +26,7 @@ public class StudentScore {
 
 	// 기본생성자, 만들지 않아도 자동으로 생성해준다.
 	public StudentScore() {
-		// System.out.println("기본생성자 생성!");
+		System.out.println("기본생성자 생성!");
 
 		name = "신사임당";
 		kor = 100;
