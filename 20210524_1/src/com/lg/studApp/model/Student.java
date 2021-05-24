@@ -90,7 +90,7 @@ public class Student {
 	}
 	
 	
-	//이것도 소스에서 override
+	//이것도 소스에서 override, 여기서는 안쓰였다. 밑에 것과 같은 기능
 	@Override
 	public String toString() {
 		String str = "이름: "+name+"\n";

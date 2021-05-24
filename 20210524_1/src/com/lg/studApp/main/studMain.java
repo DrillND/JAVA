@@ -47,8 +47,11 @@ public class studMain {
         	st[i] = new Student(name[r.nextInt(5)],age[r.nextInt(5)],gender[r.nextInt(2)],address[r.nextInt(5)]);
         }
         
-        
+// int a = 10; 실제 컴퓨터 동작은 ==> 메모리 어딘가에 10 저장됨, a라는 변수가 10을 가르키고 있다.
+// a도 저장되는 공간은 따로있다.
        
+        // st[9] = new Student("전우치",24,'남',"조선 한양인근 두메산골")
+        // 싱글톤; 위는 새로운 객체 생성, 아래 이미 만들어진 객체에 셋을 써서 수정(이게 싱글톤; 이미 만들어진 객체의 재사용) 
         
         st[9].setName("전우치");
         st[9].setAge(24);
