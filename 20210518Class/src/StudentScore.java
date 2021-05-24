@@ -46,7 +46,7 @@ public class StudentScore {
 	 */
 	// 생성자 오버로딩
 	public StudentScore(String name, int kor, int math, int eng) {
-		super();// 상속, 제너레이터로 만든 것
+		super();// 상속, 제너레이터로 만든 것//부모생성자
 		this.name = name;
 		this.kor = kor;
 		this.math = math;

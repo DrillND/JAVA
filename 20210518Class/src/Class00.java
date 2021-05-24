@@ -73,6 +73,7 @@ public class Class00 {
 
 		// 객체생성 안된다. 객체생성 시 생성자가 무조건 필요
 		StudentScore arr[] = new StudentScore[5];
+		// new 다음에 생성자 없다. 스튜던트스코어 클래스 타입의 배열
 		// 앞쪽의 StudentScore는 클래스이자 내가 만든 타입 int와 같은, arr[]배열 변수
 
 		arr[0] = new StudentScore();
