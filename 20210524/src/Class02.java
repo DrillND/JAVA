@@ -1,8 +1,8 @@
 
-public class Class01 {
+public class Class02 {
 
 	public static void main(String[] args) {
-		Class01Car car = new Class01Car();
+		Class02Car car = new Class02Car();
 		//Ctrl + /
 		System.out.println(Class01Car.JIJUM);
 		car.setModel("K7");
@@ -13,9 +13,9 @@ public class Class01 {
 		System.out.println(car.toString());
 		car.showCarinfo();
 		
-		Class01Car car2 = new Class01Car();
-		Class01Car car3 = new Class01Car();
-		Class01Car car4 = new Class01Car("현대","흰색","4천만원","그랜저");
+		Class02Car car2 = new Class02Car();
+		Class02Car car3 = new Class02Car();
+		Class02Car car4 = new Class02Car("현대","흰색","4천만원","그랜저");
 		
 		System.out.println(car4.toString());
 		car4.showCarinfo();

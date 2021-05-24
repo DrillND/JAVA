@@ -1,5 +1,5 @@
 
-public class Class01Car {
+public class Class02Car {
 	public static final String JIJUM = "동대구영업소"; //조건1
 	 //추상화(전부 때려 넣지는 못하고 추상적인 필요한 정보만 제시) --> 클래스 변수
 	private String company;
@@ -8,7 +8,7 @@ public class Class01Car {
 	private String model;
 	 // ---> 인스턴트 변수
 	 
-	public Class01Car() {
+	public Class02Car() {
 		company = "기아";
 		color = "블랙";
 		model = "K7";
@@ -16,7 +16,7 @@ public class Class01Car {
 	 }
 	
 	//생성자 오버로딩
-	public Class01Car(String company, String color, String price, String model) {
+	public Class02Car(String company, String color, String price, String model) {
 		super();
 		this.company = company;
 		this.color = color;

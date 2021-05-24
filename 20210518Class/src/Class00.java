@@ -78,7 +78,12 @@ public class Class00 {
 
 		arr[0] = new StudentScore();
 		arr[1] = new StudentScore();
-
+		// --> 처음에 StudentScore arr[] 다섯칸 만들어 놓고 그 중 arr[0]에 new StudentScore() 
+		//만들어서 객체를 생성함 
+		
+		
+		
+		
 		for (int i = 0; i < arr.length; i++) {
 			String name[] = { "홍길동", "전우치", "강감찬", "김유신", "이순신" };
 			int score[] = { 20, 40, 60, 80, 100 };
