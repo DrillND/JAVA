@@ -48,10 +48,19 @@ public class studMain {
         }
         
         
+       
+        
+        st[9].setName("전우치");
+        st[9].setAge(24);
+        st[9].setGender('남');
+        st[9].setAddress("조선 한양인근 두메산골");
+        
         for(int i = 0; i<st.length; i++) {
+        	System.out.print(i+1+" ");
         	st[i].showStInfo();
         	System.out.println();
         }
+        
         
 	}
 
