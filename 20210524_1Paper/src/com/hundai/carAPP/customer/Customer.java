@@ -24,9 +24,11 @@ public class Customer {
 	}
 
 
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 
 	public String getTel() {
@@ -34,9 +36,11 @@ public class Customer {
 	}
 
 
+
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+
 
 
 	public String getAddress() {
@@ -44,9 +48,24 @@ public class Customer {
 	}
 
 
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
+
+	public Car getCar() {
+		return car;
+	}
+
+
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+
 
 	public void printCustomerInfo() {
 		System.out.println("고객명 : "+name);

@@ -6,16 +6,16 @@ public class Car {
 	private int year;
 	private String company;
 	
-	
+	//툴을 이용
 	public Car(String model, String color, int year, String company) {
-		super();
+		super(); //부모 생성자, 부모의 위치를 가르킨다.
 		this.model = model;
 		this.color = color;
 		this.year = year;
 		this.company = company;
 	}
 
-
+	//툴을 이용
 	public String getModel() {
 		return model;
 	}
@@ -61,6 +61,16 @@ public class Car {
 		System.out.println("연식 : "+year);
 		System.out.println("제조사 : "+company);
 	}
+	
+	//리소스에서 오버라이드, 투스트링 체크
+	@Override
+	public String toString() {
+		
+		return super.toString();
+	}
+
+	
+	
 	
 	
 }
