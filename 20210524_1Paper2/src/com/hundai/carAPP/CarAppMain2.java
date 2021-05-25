@@ -24,6 +24,7 @@ public class CarAppMain2 {
 					break;
 				case 3:
 					System.out.println("중고차 매매 수동 자료 추가");
+					cs.insData();
 					break;
 				case 4 :
 					//System.out.println("프로그램 종료");

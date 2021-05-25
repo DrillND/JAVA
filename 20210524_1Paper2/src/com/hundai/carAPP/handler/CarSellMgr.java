@@ -34,7 +34,7 @@ public class CarSellMgr {
 	}
 
 	public void insData() {
-
+		cuList.add(new Customer(null, null, null, null));
 	}
 
 	public void mainExit() {
