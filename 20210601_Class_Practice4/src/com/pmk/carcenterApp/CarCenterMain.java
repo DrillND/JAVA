@@ -73,7 +73,19 @@ public class CarCenterMain {
 						break;
 
 				}
-				System.out.println("adminMenu() 동작");
+				//System.out.println("adminMenu() 동작");
+				for(;;){
+					int menu = m.adminMenu();
+					if(menu ==1) {
+						System.out.println("일일 매출합계");
+					}
+					else if (menu ==2) {
+						System.out.println("차량수리 내역보기");
+					}
+					else if (menu ==3) {
+						break;
+					}
+				}
 				
 				break;
 			case Menu.MAIN_MENU_EXIT:
